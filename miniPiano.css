@@ -4,76 +4,81 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%; /* Ensure the full height of the screen is used */
+body {
+    height: 100%;
     width: 100%;
-    display: flex; /* This will help to center the piano vertically and horizontally */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #646464;
 }
 
-/* Styling the piano container */
 .piano {
     width: 100%;
-    height: auto; /* Adjust the height automatically based on the keys' height */
+    height: auto;
     position: relative;
-    display: flex; /* This will ensure the white keys line up in a row */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Styling the white keys */
 .whitekey {
     width: 10%;
-    height: 60vh; /* Adjust the height to your liking */
+    height: 60vh;
     background-color: white;
     display: inline-block;
-    position: relative; /* Needed to position the black keys relative to the white ones */
+    position: relative;
     border: 1px solid #000;
 }
 
-/* Styling the black keys */
 .blackkey {
-    width: 2%; /* Adjust the width of the black keys */
-    height: 30vh; /* Adjust the height to be shorter than the white keys */
+    width: 3%;
+    height: 30vh;
     background-color: black;
     display: inline-block;
-    position: absolute; /* Absolute position relative to their parent white key */
+    position: absolute;
     z-index: 2;
     border: 1px solid #000;
+    top: 0;
 }
 
-/* Adjusting individual black keys */
-/* You'll need to adjust the 'left' property for each black key to position them correctly. */
-/* The 'left' property is calculated based on the width of the white keys and the desired placement of the black keys. */
-
-/* Place the first black key a little after the first white key */
 #blackkey1 {
-    left: 9%;
+    left: 8.5%;
 }
 
-/* Each subsequent black key should be positioned after every white key with the appropriate gap */
 #blackkey2 {
-    left: 19%;
+    left: 18.5%;
 }
 
-/* Continue the pattern for all black keys */
 #blackkey3 {
-    left: 39%; /* Skip one white key for the gap */
+    left: 38.5%;
 }
 
 #blackkey4 {
-    left: 49%;
+    left: 48.5%;
 }
 
 #blackkey5 {
-    left: 59%;
+    left: 58.5%;
 }
 
 #blackkey6 {
-    left: 79%; /* Skip one white key for the gap */
+    left: 78.5%;
 }
 
 #blackkey7 {
-    left: 89%;
+    left: 88.5%;
+}
+
+.whitekey, .blackkey {
+    cursor: pointer;
+}
+
+.whitekey:hover, .blackkey:hover {
+    box-shadow: 0 0 15px #7e7e7e;
+    background-color: #cecece;
+}
+
+.blackkey:hover {
+    background-color: #6e6e6e;
 }
