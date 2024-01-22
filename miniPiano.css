@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Ensure the full height of the screen is used */
+    width: 100%;
+    display: flex; /* This will help to center the piano vertically and horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Styling the piano container */
+.piano {
+    width: 100%;
+    height: auto; /* Adjust the height automatically based on the keys' height */
+    position: relative;
+    display: flex; /* This will ensure the white keys line up in a row */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the white keys */
+.whitekey {
+    width: 10%;
+    height: 60vh; /* Adjust the height to your liking */
+    background-color: white;
+    display: inline-block;
+    position: relative; /* Needed to position the black keys relative to the white ones */
+    border: 1px solid #000;
+}
+
+/* Styling the black keys */
+.blackkey {
+    width: 2%; /* Adjust the width of the black keys */
+    height: 30vh; /* Adjust the height to be shorter than the white keys */
+    background-color: black;
+    display: inline-block;
+    position: absolute; /* Absolute position relative to their parent white key */
+    z-index: 2;
+    border: 1px solid #000;
+}
+
+/* Adjusting individual black keys */
+/* You'll need to adjust the 'left' property for each black key to position them correctly. */
+/* The 'left' property is calculated based on the width of the white keys and the desired placement of the black keys. */
+
+/* Place the first black key a little after the first white key */
+#blackkey1 {
+    left: 9%;
+}
+
+/* Each subsequent black key should be positioned after every white key with the appropriate gap */
+#blackkey2 {
+    left: 19%;
+}
+
+/* Continue the pattern for all black keys */
+#blackkey3 {
+    left: 39%; /* Skip one white key for the gap */
+}
+
+#blackkey4 {
+    left: 49%;
+}
+
+#blackkey5 {
+    left: 59%;
+}
+
+#blackkey6 {
+    left: 79%; /* Skip one white key for the gap */
+}
+
+#blackkey7 {
+    left: 89%;
+}
